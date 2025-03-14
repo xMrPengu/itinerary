@@ -1,7 +1,13 @@
 public class Prettifier {
     public static void main(String[] args) {
-        if (args[0].equals("-h")) {
-            System.out.println("itinerary usage:\n$ java Prettifier.java ./input.txt ./output.txt ./airport-lookup.csv");
+        
+        String usage = "itinerary usage:\n$ java Prettifier.java ./input.txt ./output.txt ./airport-lookup.csv";
+
+        if (args.length < 3) {
+            System.out.println(usage);
+        }
+        else if (args[0].equals("-h")) {
+            System.out.println(usage);
         }
     }
 }
